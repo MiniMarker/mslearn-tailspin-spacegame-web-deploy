@@ -69,7 +69,7 @@ stages:
     displayName: 'Deploy application on App Service'
     dependsOn: Build
     jobs:
-      - deplpoyment: Deploy
+      - deployment: Deploy
         enviornment: dev
         pool:
           vmImage: 'ubuntu-16.04'
