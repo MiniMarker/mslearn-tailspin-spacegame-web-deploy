@@ -68,17 +68,13 @@ stages:
   - stage: 'Deploy'
     displayName: 'Deploy application on App Service'
     dependsOn: Build
-
     jobs:
       - deplpoyment: Deploy
         enviornment: dev
-
         pool:
           vmImage: 'ubuntu-16.04'
-        
         variables:
           - group: Release
-        
         strategy:
           runOnce: 
             deploy:
