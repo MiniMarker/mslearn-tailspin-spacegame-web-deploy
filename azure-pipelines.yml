@@ -64,4 +64,9 @@ stages:
           
           - publish: '$(Build.ArtifactStagingDirectory)'
             artifact: drop
-        
+  
+  - stage: 'Deploy'
+    displayName: 'Deploy application on App Service'
+    dependsOn: Build
+    jobs:
+      - script: 'echo $(buildConfiguration)'
